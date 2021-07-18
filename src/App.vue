@@ -1,28 +1,26 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div id="app">chaos-ui
+    <cs-button>123</cs-button>
+    <cs-button type='primary'>123</cs-button>
+    <cs-button type='success'>123</cs-button>
+    <cs-button type='info'>plain</cs-button>
+    <cs-button type='warning'>123</cs-button>
+    <cs-button type='danger'>123</cs-button>
+    <cs-button plain>朴素按钮</cs-button>
+    <cs-button
+      type='primary'
+      plain
+    >朴素按钮 primary</cs-button>
+
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
 export default {
-  name: 'App',
-  components: {
-    HelloWorld
+  data () {
+    return {}
   }
 }
 </script>
 
-<style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
+<style lang="scss"></style>
