@@ -8,7 +8,13 @@
     'is-disabled':disabled
   }]"
     :disabled="disabled"
+    @click="_handleClick"
   >
+    <!-- add icon -->
+    <i
+      v-if="icon"
+      :class="icon"
+    ></i>
     <!-- if no text slot ，don't show span content -->
     <span v-if="$slots.default">
       <slot></slot>
@@ -45,6 +51,11 @@ export default {
     disabled: {
       type: Boolean,
       default: false
+    }
+  },
+  methods: {
+    _handleClick (e) {
+      this.$emit('click', e)
     }
   }
 }

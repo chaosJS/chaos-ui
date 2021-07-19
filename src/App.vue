@@ -1,24 +1,69 @@
 <template>
   <div id="app">chaos-ui
-    <cs-button>123</cs-button>
+    <cs-button @click='(e)=>{
+      handleClick(222,e)
+      }'>123</cs-button>
     <cs-button type='primary'>123</cs-button>
     <cs-button type='success'>123</cs-button>
     <cs-button type='info'>plain</cs-button>
-    <cs-button type='warning'>123</cs-button>
-    <cs-button type='danger'>123</cs-button>
+    <cs-button
+      type='warning'
+      disabled
+    >123</cs-button>
+    <cs-button
+      type='danger'
+      icon='cs-icon-zhinanzhen'
+    >123</cs-button>
     <cs-button plain>朴素按钮</cs-button>
     <cs-button
       type='primary'
       plain
     >朴素按钮 primary</cs-button>
+    <hr>
+    <!-- <cs-dialog title='温馨提示'></cs-dialog> -->
+    <cs-dialog
+      width='60%'
+      top='100px'
+      :visible.sync="visible"
+    >
+      <!-- .sync is a  syntactic sugar, and  in child comp we must emit a func in update:propname  -->
+      <!-- <template slot="title"> -->
+      <template v-slot:title>
+        <h4>123</h4>
+      </template>
+      <div>body content</div>
+      <template v-slot:footer>
+        <cs-button
+          type='primary'
+          @click="visible = false"
+        >close</cs-button>
 
+      </template>
+    </cs-dialog>
+    <cs-button
+      plain
+      @click="showDialog"
+    >show dialog</cs-button>
+    <hr>
+    <cs-input></cs-input>
   </div>
 </template>
 
 <script>
 export default {
   data () {
-    return {}
+    return {
+      visible: false
+    }
+  },
+  methods: {
+    handleClick (d, e) {
+      console.log(123, d, e)
+    },
+    showDialog () {
+      this.visible = true
+    }
+
   }
 }
 </script>
