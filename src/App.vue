@@ -45,7 +45,40 @@
       @click="showDialog"
     >show dialog</cs-button>
     <hr>
-    <cs-input></cs-input>
+    <cs-input
+      v-model="username"
+      clearable
+      type='password'
+      show-password
+      style="width:200px"
+    ></cs-input>
+    <cs-input
+      :value="username"
+      @input="(value)=>{
+        username=value
+      }"
+    ></cs-input>
+    <hr>
+    <cs-switch
+      v-model="isNeed"
+      name='needHelp'
+      active-color='red'
+      inactive-color='green'
+    ></cs-switch>
+
+    <cs-radio
+      v-model="size"
+      label='1'
+    >Big</cs-radio>
+    <cs-radio
+      v-model="size"
+      label='2'
+    ></cs-radio>
+    <cs-radio
+      v-model="size"
+      label='3'
+    >Small</cs-radio>
+
   </div>
 </template>
 
@@ -53,7 +86,11 @@
 export default {
   data () {
     return {
-      visible: false
+      visible: false,
+      username: '',
+      isNeed: true,
+      // radio
+      size: '2'
     }
   },
   methods: {
