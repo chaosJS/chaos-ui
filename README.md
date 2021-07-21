@@ -10,3 +10,8 @@
    2. clearable show-password
 4. switch
    1. switch color `watch`, `this.$refs`
+5. radio and radio-group
+   1. `provide / inject`. like provider and consumer in react
+6. checkbox and checkbox-group
+   1. just like `radio / radio-group`, but checkbox-group should get an array
+7. form / form-item

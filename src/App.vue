@@ -78,7 +78,39 @@
       v-model="size"
       label='3'
     >Small</cs-radio>
+    <cs-radio-group v-model="gender">
+      <cs-radio label='1'>male</cs-radio>
+      <cs-radio label='0'>female</cs-radio>
+    </cs-radio-group>
 
+    <hr>
+    <cs-checkbox
+      v-model="checkboxActive"
+      label="is-selected"
+    ></cs-checkbox>
+
+    <cs-checkbox-group v-model="fruit">
+      <cs-checkbox label="apple"></cs-checkbox>
+      <cs-checkbox label="orange"></cs-checkbox>
+      <cs-checkbox label="banana"></cs-checkbox>
+    </cs-checkbox-group>
+    <hr>
+    <cs-form
+      :model="formModel"
+      label-width="150px"
+    >
+      <cs-form-item label="username">
+        <cs-input
+          v-model="formModel.username"
+          clearable
+          placeholder="please input username"
+        ></cs-input>
+      </cs-form-item>
+
+      <cs-form-item label="switch active">
+        <cs-switch v-model="formModel.active"></cs-switch>
+      </cs-form-item>
+    </cs-form>
   </div>
 </template>
 
@@ -90,7 +122,21 @@ export default {
       username: '',
       isNeed: true,
       // radio
-      size: '2'
+      size: '2',
+      gender: '1',
+      // checkbox
+      checkboxActive: true,
+      fruit: [
+        'apple',
+        'orange',
+        'banana'
+      ],
+      // form
+      formModel: {
+        username: '',
+        active: true
+      }
+
     }
   },
   methods: {

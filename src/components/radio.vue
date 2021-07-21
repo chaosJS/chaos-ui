@@ -25,6 +25,12 @@
 <script>
 export default {
   name: 'CsRadio',
+  inject: {
+    radioGroup: {
+      // if not in <cs-radio-group></cs-radio-group>
+      default: null
+    }
+  },
   props: {
     label: {
       type: [String, Number, Boolean],
@@ -39,11 +45,17 @@ export default {
   computed: {
     model: {
       get () {
-        return this.value
+        return this.isInGroup ? this.radioGroup.value : this.value
       },
       set (value) {
-        this.$emit('input', value)
+        this.isInGroup
+          ? this.radioGroup.$emit('input', value)
+          : this.$emit('input', value)
       }
+    },
+    isInGroup () {
+      // is in radio-group
+      return !!this.radioGroup
     }
   }
 }
