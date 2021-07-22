@@ -19,7 +19,6 @@
     <span v-if="$slots.default">
       <slot></slot>
     </span>
-    123
   </button>
 </template>
 
