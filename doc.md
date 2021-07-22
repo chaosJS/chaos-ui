@@ -1,4 +1,4 @@
-# chaos-ui
+# chaosli-ui
 
 1. basic button. nothing special, should pay attention to style
 2. dialog
@@ -30,3 +30,5 @@
       2. need a npm account
       3. `npm login`
       4. `npm publish`
+      5. update & publish: after change file, push to github
+      6. add `package.json` version
