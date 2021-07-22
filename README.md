@@ -15,3 +15,11 @@
 6. checkbox and checkbox-group
    1. just like `radio / radio-group`, but checkbox-group should get an array
 7. form / form-item
+8. package all components
+   1. copy all `src/components` .vue and `src/assets` fonts file into `packages`. see `copy-to-pkgs.js`
+   2. add `index.js` in `packages` to install all components
+   3. extends `vue.config.js` , compile all `packages` file
+   4. add `"lib": "node copy-to-pkgs.js && vue-cli-service build --target lib packages/index.js"` in package.json
+9. publish in npm
+   1. in `package.json` change `privete: false`
+   2. no duplicate name in npm

@@ -1,0 +1,56 @@
+@font-face {
+  font-family: 'iconfont'; /* Project id 2617113 */
+  font-family: 'iconfont'; /* Project id 2617113 */
+  src: url('//at.alicdn.com/t/font_2617113_b9nike3vg86.eot?t=1626746162517'); /* IE9 */
+  src: url('//at.alicdn.com/t/font_2617113_b9nike3vg86.eot?t=1626746162517#iefix')
+      format('embedded-opentype'),
+    /* IE6-IE8 */
+      url('//at.alicdn.com/t/font_2617113_b9nike3vg86.woff2?t=1626746162517')
+      format('woff2'),
+    url('//at.alicdn.com/t/font_2617113_b9nike3vg86.woff?t=1626746162517')
+      format('woff'),
+    url('//at.alicdn.com/t/font_2617113_b9nike3vg86.ttf?t=1626746162517')
+      format('truetype'),
+    url('//at.alicdn.com/t/font_2617113_b9nike3vg86.svg?t=1626746162517#iconfont')
+      format('svg');
+}
+
+[class*='cs-icon-'] {
+  font-family: 'iconfont' !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.cs-icon-yanjing:before {
+  content: '\e629';
+}
+
+.cs-icon-guanbi:before {
+  content: '\e612';
+}
+
+.cs-icon-huanyipi:before {
+  content: '\e6e1';
+}
+
+.cs-icon-search:before {
+  content: '\e706';
+}
+
+.cs-icon-app4:before {
+  content: '\e6f4';
+}
+
+.cs-icon-Aa:before {
+  content: '\e636';
+}
+
+.cs-icon-zhinanzhen:before {
+  content: '\e651';
+}
+
+.cs-icon-line-quillpenyumaobi:before {
+  content: '\e6eb';
+}

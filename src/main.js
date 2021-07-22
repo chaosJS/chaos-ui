@@ -10,8 +10,10 @@ import CsCheckbox from './components/checkbox.vue'
 import CsCheckboxGroup from './components/checkbox-group.vue'
 import CsForm from './components/form.vue'
 import CsFormItem from './components/form-item.vue'
-
 import './assets/fonts/font.scss'
+// test if packages installed
+// import CsUi from '../packages'
+// Vue.use(CsUi)
 Vue.config.productionTip = false
 Vue.component(CsButton.name, CsButton)
 Vue.component(CsDialog.name, CsDialog)
