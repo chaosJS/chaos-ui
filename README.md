@@ -23,3 +23,8 @@
 9. publish in npm
    1. in `package.json` change `privete: false`
    2. no duplicate name in npm
+   3. change main value
+   4. add files in `package.json`, don't use .npmignore
+   5. npm publish
+      1. `npm get registry` must be original npm org
+      2. need a npm account

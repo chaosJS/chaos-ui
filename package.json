@@ -2,9 +2,18 @@
   "name": "chaosli-ui",
   "version": "0.1.0",
   "private": false,
-  "main": "dist/chaosli-ui.umd.min.js",
+  "main": "dist/chaosli-ui.common.js",
   "description": "Vue Component styled element.",
   "license": "MIT",
+  "files": [
+    "dist",
+    "packages"
+  ],
+  "style": "dist/chaosli-ui.css ",
+  "keywords": [
+    "vue",
+    "components"
+  ],
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
